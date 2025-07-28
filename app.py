@@ -34,4 +34,8 @@ def create_app():
 
         return render_template("home.html", entries=entries_with_date)
     
+
+    @app.route("/jinja", methods=['GET', 'POST'])
+    def todo():
+        return render_template("home2.html", todos=["Get milk", "Learn programming"])
     return app
